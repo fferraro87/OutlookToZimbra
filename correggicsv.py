@@ -7,11 +7,7 @@ import pandas as pd
 
 #Creo una nuova cartella per mettere i nuovi csv modificati
 os.makedirs('Aggiornati',exist_ok=True)
-#Cerco i file csv all'interno della cartella'
-#for csvFilename in os.listdir('.'):
-#    if not csvFilename.endswith('.csv'):
-#        continue
-#Creo un dataframe
+
 for csvFilename in sys.argv[1:]:
     data=read_csv(csvFilename,error_bad_lines=False)
     #Seleziono i campi vuoti delle email e copio dalla colonna dopo della stessa riga
